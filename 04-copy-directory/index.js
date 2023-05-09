@@ -7,7 +7,7 @@ function copyDir(){
     fs.mkdir(path.join(__dirname,'files-copy'),{recursive:true},  error => {
         if (error) throw error;
     });
-    fs.readdir(pathToFiles, {withFileTypes: true},(err, files) => {
+    fs.readdir(pathToFiles, {withFileTypes: true},(error, files) => {
         if(error) throw error;
         files.forEach(file=>{
             let inputPath =  path.join(__dirname, 'files',file.name);
